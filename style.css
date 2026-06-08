@@ -1,0 +1,153 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    background: #F4F6F8;
+    color: #333;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(90deg, #4A90E2 70%, #FFC1CC 100%);
+    color: #fff;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(120deg, #4A90E2 60%, #F4F6F8 100%);
+    color: #fff;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.hero .cta {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 32px;
+    background: #2ECC71;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(74,144,226,0.15);
+    transition: background 0.3s;
+}
+.hero .cta:hover {
+    background: #27ae60;
+}
+section {
+    padding: 60px 20px 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+h2 {
+    color: #4A90E2;
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+.property-list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.property-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(74,144,226,0.08);
+    overflow: hidden;
+    width: 260px;
+    margin-bottom: 20px;
+}
+.property-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+.property-card h3 {
+    margin: 10px 16px 8px 16px;
+    font-size: 1.1rem;
+    color: #333;
+}
+.property-card p {
+    margin: 0 16px 16px 16px;
+    color: #555;
+}
+.service ul {
+    padding-left: 20px;
+}
+.service li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 400px;
+    margin-bottom: 28px;
+}
+.contact input,
+.contact textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #4A90E2;
+    font-size: 1rem;
+}
+.contact button {
+    background: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.contact button:hover {
+    background: #2ECC71;
+}
+.map iframe {
+    border-radius: 12px;
+    margin-top: 10px;
+}
+footer {
+    background: #4A90E2;
+    color: #fff;
+    text-align: center;
+    padding: 24px 10px 14px 10px;
+    margin-top: 40px;
+    font-size: 1rem;
+}
+footer .sns a {
+    color: #FFC1CC;
+    margin: 0 6px;
+    text-decoration: none;
+}
+@media (max-width: 900px) {
+    .property-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    header, section {
+        padding: 16px 10px;
+    }
+}
