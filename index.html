@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新協エステートSHINKYO | 外国人のお部屋探しサポート</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap" rel="stylesheet">
+    <title>新協エステート SHIN-KYO | 外国人のお部屋探しサポート</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #00205B; /* Navy Blue */
@@ -21,7 +21,7 @@
             line-height: 1.6;
         }
 
-        /* Header */
+        /* ----- Header ----- */
         header {
             display: flex;
             justify-content: space-between;
@@ -33,17 +33,41 @@
             top: 0;
             z-index: 1000;
         }
+        
+        /* 🔥 အထာကျကျ ပြင်ဆင်ထားသော Logo Design */
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
-        .logo-container img { height: 50px; object-fit: contain; }
-        .logo-text { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+        .logo-container img { 
+            height: 55px; 
+            object-fit: contain; 
+        }
+        .logo-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .logo-ja {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+        .logo-en {
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
         nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
         nav a { color: var(--primary-color); text-decoration: none; font-weight: bold; font-size: 0.95rem; }
 
-        /* Hero */
+        /* ----- Hero ----- */
         .hero {
             padding: 80px 20px;
             text-align: center;
@@ -53,7 +77,7 @@
         .hero h1 { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 10px; }
         .hero p { font-size: 1.1rem; margin-bottom: 20px; }
 
-        /* Campaign Banner */
+        /* ----- Campaign Banner ----- */
         .campaign-banner {
             background: #FFD700;
             color: #d32f2f;
@@ -64,21 +88,21 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
-        /* Common Section */
+        /* ----- Common Section ----- */
         section { padding: 50px 5%; max-width: 1000px; margin: 0 auto; }
         .bg-white { background: #fff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 40px; margin-bottom: 30px;}
         h2 { text-align: center; color: var(--primary-color); font-size: 1.8rem; margin-bottom: 30px; }
         h2::after { content: ''; width: 50px; height: 3px; background: var(--accent-color); display: block; margin: 10px auto 0; }
 
-        /* Tags / Languages / Area */
+        /* ----- Tags / Languages / Area ----- */
         .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
         .tag { background: #eef2f7; color: var(--primary-color); padding: 8px 16px; border-radius: 20px; font-weight: bold; border: 1px solid #d1dbe8; }
         
-        /* Grid Layouts */
+        /* ----- Grid Layouts ----- */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 
-        /* Image Placeholders */
+        /* ----- Image Placeholders ----- */
         .img-placeholder {
             width: 100%;
             height: 200px;
@@ -93,25 +117,25 @@
             border: 2px dashed #bbb;
         }
 
-        /* Cards (Staff, Voices, Support) */
+        /* ----- Cards (Staff, Voices, Support) ----- */
         .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-top: 3px solid var(--accent-color); text-align: center; }
         
-        /* Document List */
+        /* ----- Document List ----- */
         .doc-list { list-style: none; padding: 0; }
         .doc-list li { background: #f9f9f9; margin-bottom: 10px; padding: 15px; border-left: 4px solid var(--primary-color); }
         .doc-list strong { color: var(--primary-color); display: block; margin-bottom: 5px;}
 
-        /* FAQ (Accordion) */
+        /* ----- FAQ (Accordion) ----- */
         details { background: #fff; margin-bottom: 10px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         summary { font-weight: bold; color: var(--primary-color); cursor: pointer; }
         details p { margin-top: 10px; color: #555; padding-top: 10px; border-top: 1px dashed #ccc; }
 
-        /* Contact & Buttons */
+        /* ----- Contact & Buttons ----- */
         .btn-sns { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 350px; padding: 16px; border-radius: 8px; font-size: 1.2rem; font-weight: bold; color: #fff; text-decoration: none; margin: 10px auto; }
         .btn-fb { background: #1877F2; }
         .btn-tk { background: #000000; }
 
-        /* Sticky Mobile Contact Bar */
+        /* ----- Sticky Mobile Contact Bar ----- */
         .sticky-footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; z-index: 1000; }
         .sticky-btn { flex: 1; text-align: center; padding: 15px 0; font-weight: bold; text-decoration: none; color: #fff; font-size: 1rem; }
         .s-fb { background: #1877F2; }
@@ -133,7 +157,10 @@
     <header>
         <div class="logo-container">
             <img src="0198ac2e-3c0d-4019-8300-5ba0961c331c.jpg" alt="Logo">
-            <span class="logo-text">新協エステートSHINKYO</span>
+            <div class="logo-text-wrapper">
+                <span class="logo-ja">新協エステート</span>
+                <span class="logo-en">SHIN-KYO</span>
+            </div>
         </div>
         <nav>
             <ul>
@@ -151,10 +178,11 @@
 
     <section class="hero">
         <h1>すべての外国人のお部屋探しをサポート</h1>
-        <p>日本での新しい生活を、新協エステートSHINKYOが全力でお手伝いします。</p>
+        <p>日本での新しい生活を、新協エステート SHIN-KYO が全力でお手伝いします。</p>
         <a href="#contact" style="display:inline-block; padding:15px 40px; background:var(--accent-color); color:var(--primary-color); border-radius:30px; text-decoration:none; font-size:1.2rem; font-weight:bold;">無料でお部屋を探す</a>
     </section>
 
+    <!-- 1. Languages & Area -->
     <section id="about" class="bg-white">
         <h2>対応言語 ＆ 対応エリア</h2>
         <p style="text-align: center; margin-bottom: 20px;">日本にいるすべての外国人の方を歓迎します！</p>
@@ -172,6 +200,7 @@
         <p style="text-align: center;">大阪・京都・兵庫・奈良・滋賀・和歌山の物件を多数取り扱っています。</p>
     </section>
 
+    <!-- 2 & 10. Life Support & Online Tour -->
     <section id="services">
         <h2>充実のサポート体制</h2>
         <div class="grid-3">
@@ -190,6 +219,7 @@
         </div>
     </section>
 
+    <!-- 3. Required Documents & Initial Costs -->
     <section id="guide" class="bg-white">
         <h2>ビザ別・必要書類ガイド</h2>
         <p>在留資格に合わせて柔軟に対応します。基本的には以下の書類をご準備ください。</p>
@@ -222,15 +252,18 @@
         </div>
     </section>
 
+    <!-- 4. Customer Voices & Staff -->
     <section id="voices">
         <h2>お客様の声 ＆ スタッフ紹介</h2>
         <div class="grid-2">
+            <!-- Customer Voice 1 -->
             <div class="card">
                 <div class="img-placeholder">[お客様の笑顔の写真 1]</div>
                 <h4 style="color: var(--primary-color);">「特定技能への切り替え時に助かりました！」</h4>
                 <p style="font-size: 0.9rem; color: #555;">ミャンマー出身 / 20代男性 (特定技能)<br>
                 実習生から特定技能に変わるタイミングで、ビザの書類が複雑でしたが、スタッフの方が親身にオーナーと交渉してくれました。</p>
             </div>
+            <!-- Customer Voice 2 -->
             <div class="card">
                 <div class="img-placeholder">[お客様の笑顔の写真 2]</div>
                 <h4 style="color: var(--primary-color);">「母国語でガスや電気の契約をしてくれた」</h4>
@@ -254,6 +287,7 @@
         </div>
     </section>
 
+    <!-- 5. FAQ -->
     <section id="faq" class="bg-white">
         <h2>よくある質問 (FAQ)</h2>
         
@@ -278,6 +312,7 @@
         </details>
     </section>
 
+    <!-- Contact & Company -->
     <section id="contact">
         <h2>お問い合わせ</h2>
         <p style="text-align: center;">ご希望のエリア、家賃などをSNSから直接メッセージを送ってください。<br>担当者がすぐにお返事いたします。</p>
@@ -289,7 +324,7 @@
 
         <div class="bg-white" style="margin-top: 40px;">
             <h3 style="color: var(--primary-color); margin-bottom: 20px;">会社概要</h3>
-            <p><strong>商号：</strong> 有限会社新協工業所 (新協エステートSHINKYO)<br>
+            <p><strong>商号：</strong> 有限会社新協工業所 (新協エステート SHIN-KYO)<br>
             <strong>免許証番号：</strong> 京都府知事（1）第15128号<br>
             <strong>所在地：</strong> 〒601-1416 京都府京都市伏見区日野岡西町4-38<br>
             <strong>電話：</strong> 075-752-3140</p>
@@ -297,9 +332,10 @@
     </section>
 
     <footer>
-        <p>© 2026 有限会社新協工業所 (新協エステートSHINKYO). All rights reserved.</p>
+        <p>© 2026 有限会社新協工業所 (新協エステート SHIN-KYO). All rights reserved.</p>
     </footer>
 
+    <!-- Sticky Mobile Contact Bar -->
     <div class="sticky-footer">
         <a href="https://m.me/YOUR_FACEBOOK_PAGE" target="_blank" class="sticky-btn s-fb">FBで相談</a>
         <a href="https://www.tiktok.com/@YOUR_TIKTOK" target="_blank" class="sticky-btn s-tk">TikTokで相談</a>
